@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <h1><img src="imgs/menu.png" alt="DIVISORES" onclick="window.location.href = 'menu.html';" height="50px" width="50px">calculadora de Segundo Grau</h1>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>A:<input type="text" id="a"></p>
+    <p>B:<input type="text" id="b"></p>
+    <p>C:<input type="text" id="c"></p>
+
+    <p><button onclick="bhaskara()">BHASKARA </button></p>
+    <p><span id="resultado">???</span></p>
+
+    <script type="text/javascript">
+      function bhaskara(){
+        let a=document.getElementById("a");
+        let b=document.getElementById("b");
+        let c=document.getElementById("c");
+
+        let va=parseInt(a.value);
+        let vb=parseInt(b.value);
+        let vc=parseInt(c.value);
+
+        let delta = (vb*vb)-(4*va*vc);
+
+        let resultado= document.getElementById("resultado");
+
+        if(delta<0)
+        {
+          let result="Nenhuma raíz real";
+          resultado.textContent= result;
+        }
+        if(delta==0)
+        {
+          let x1=(-vb-Math.sqrt(delta))/2*va;
+          let result="Uma raíz real: X1="+x1;
+          resultado.textContent = result;
+        }
+        if(delta>0)
+        {
+          let x1=(-vb-Math.sqrt(delta))/2*va;
+          let x2=(-vb+Math.sqrt(delta))/2*va;
+          let result="Duas raízes reais: X1="+x1+" e X2="+x2;
+          resultado.textContent = result;
+        }
+      }
+    </script>
+  </body>
+</html>

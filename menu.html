@@ -5,10 +5,34 @@
     <title></title>
   </head>
   <body>
-    <img src="imgs/divi.png" alt="DIVISORES" onclick="window.location.href = 'divisores comuns.html';">
-    <p></p>
-    <img src="imgs/ou.png" alt="OU">
-    <p></p>
-    <img src="imgs/calculadora.png" alt="EQUAÇÃO" onclick="window.location.href = 'bhaskara.html';">
+    <div class="menu">
+
+      <div class="op1">
+        <img src="imgs/divi.png" alt="DIVISORES" onclick="window.location.href = 'divisores comuns.html';">
+      </div>
+
+      <div class="ou">
+        <img src="imgs/ou.png" alt="OU">
+      </div>
+
+      <div class="op2">
+        <img src="imgs/calculadora.png" alt="EQUAÇÃO" onclick="window.location.href = 'bhaskara.html';">
+      </div>
+
+    </div>
+    <style media="screen">
+      body{
+        display: flex;
+        height: 100vh;
+        background-image:url(imgs/parede.jpeg);
+      }
+      .menu{
+        width: 1262px;
+        height: 512px;
+        margin: auto;
+        display: flex;
+      }
+      
+    </style>
   </body>
 </html>

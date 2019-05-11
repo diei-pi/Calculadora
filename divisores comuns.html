@@ -3,21 +3,45 @@
   <head>
 
 
-    <h1><img src="imgs/menu.png" alt="DIVISORES" onclick="window.location.href = 'menu.html';" height="50px" width="50px">
-    Calculadora de divisores comuns</h1>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
+    <div class="titulo">
 
-    <p>A:<input type="text" id="a"></p>
-    <p>B:<input type="text" id="b"></p>
+      <h1><img src="imgs/menu.png" alt="DIVISORES" onclick="window.location.href = 'menu.html';" height="50px" width="50px">
+        Calculadora de divisores comuns</h1>
+    </div>
+    <div class="tabuleiro">
+      <div class="box">
+
+          <p>A:<input type="text" id="a"></p>
+          <p>B:<input type="text" id="b"></p>
 
     <p><button onclick="divi()">=</button></p>
     <p><span id="resultado">???</span></p>
-
+    </div>
+</div>
     <script src="scripts.js" charset="utf-8"></script>
 
+    <style media="screen">
+    .box{
+      width: auto;
+      height: 150px;
+      margin: auto;
+      border: 5px solid yellow;
+    }
+    input {
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+    body{
+
+      text-align: center;
+      background-color: aqua;
+    }
+    </style>
 
   </body>
 </html>
